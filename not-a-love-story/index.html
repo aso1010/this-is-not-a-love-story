@@ -11,7 +11,7 @@
   gtag('config', 'G-22DRN1XNE9');
 </script>
 
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src https://www.googletagmanager.com 'sha256-V2ku6RUTqPdTJWLORGNzZtSj8IkoVJW7rqqq9vQg/QM=' 'sha256-7M8feG/BZdQuJoqrWj9WMiIGbH1cdaCyhmsW+YozNz8=' 'sha256-kci3eEiDQHUC/r9PEWpyczMLuryAd+X2z0tVPkS92Ew='; style-src 'sha256-dBFwkVN59z9HsImXybenoKii69EZVdjhzrplWHfh0bs='; font-src data:; img-src data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src https://www.googletagmanager.com 'sha256-V2ku6RUTqPdTJWLORGNzZtSj8IkoVJW7rqqq9vQg/QM=' 'sha256-7M8feG/BZdQuJoqrWj9WMiIGbH1cdaCyhmsW+YozNz8=' 'sha256-TdAo/MwdyWpg8Cil80DCB+h7R6MWWnpzYRgEFC8NzoQ='; style-src 'sha256-xs1NcwC7p6wXdcmffCkdM5nOAXalFm+zn8fFT/7Zswo='; font-src data:; img-src data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>This Is Not a Love Story (Yankees) — Argelys Samuel Oriach</title>
@@ -646,6 +646,63 @@ a { color: inherit; text-decoration: none }
   .nodes a { display: block; box-shadow: none }
 }
 .sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* Transitions Pro adaptations: organic-shimmer travelling window and
+   pro-gradient-text glyph clipping, tuned to the existing amber palette.
+   Effects live on structural markers only; prose is always fully visible. */
+@media screen {
+  .bar-nav a, .polarity, .nodes a, .terminus a {
+    transition: color 210ms var(--ease-organic), background-color 210ms var(--ease-organic), box-shadow 210ms var(--ease-organic);
+  }
+  .gate::after, .scene::after {
+    content: ""; position: absolute; pointer-events: none;
+    height: 1px; left: 0; right: 0; top: 0;
+    background: linear-gradient(90deg, transparent 0%, var(--amber) 48%, transparent 100%);
+    opacity: 0;
+    mask-image: linear-gradient(90deg, transparent 35%, #000 50%, transparent 65%);
+    mask-size: 280% 100%; mask-position: 100% 0;
+  }
+  .scene::after { top: 50% }
+  .gate.is-arriving::after, .scene.is-arriving::after {
+    animation: threshold-shimmer 1300ms var(--ease-organic) both;
+  }
+  @keyframes threshold-shimmer {
+    0% { mask-position: 100% 0; opacity: 0 }
+    20%, 65% { opacity: .65 }
+    100% { mask-position: 0% 0; opacity: 0 }
+  }
+  /* Preserve the breathing animation on the same number. The highlight
+     uses its own background transition rather than replacing animation. */
+  @supports (background-clip: text) {
+    .gate-num {
+      background-image: radial-gradient(ellipse at center, var(--amber-ink), transparent 65%), linear-gradient(var(--ink), var(--ink));
+      background-size: 240% 180%, 100% 100%;
+      background-position: 120% 50%, 0 0;
+      background-repeat: no-repeat;
+      background-clip: text; -webkit-background-clip: text;
+      color: transparent;
+      transition: background-position 800ms var(--ease-organic);
+    }
+    .gate a:hover .gate-num, .gate a:focus-visible .gate-num { background-position: 40% 50%, 0 0 }
+  }
+  ::view-transition-old(root), ::view-transition-new(root) {
+    animation-duration: 340ms; animation-timing-function: ease-in-out;
+    mix-blend-mode: normal;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gate.is-arriving::after, .scene.is-arriving::after { animation: none }
+  .gate-num, .bar-nav a, .polarity, .nodes a, .terminus a { transition: none }
+  ::view-transition-old(root), ::view-transition-new(root) { animation: none }
+}
+@media (forced-colors: active) {
+  .gate-num { background: none; color: CanvasText }
+  .gate::after, .scene::after { display: none }
+}
+@media print {
+  .gate-num { background: none; color: #000 }
+  .gate::after, .scene::after { display: none }
+}
 </style>
 </head>
 <body id="top">
@@ -1128,7 +1185,40 @@ a { color: inherit; text-decoration: none }
     if (keep) { try { localStorage.setItem(KEY, p); } catch (e) { /* storage sealed: polarity holds for this view */ } }
   };
   setPole(pole(), false);
-  toggle.addEventListener('click', () => setPole(pole() === 'light' ? 'dark' : 'light', true));
+  let polarityTransition = null;
+  toggle.addEventListener('click', () => {
+    if (polarityTransition) return;
+    const next = pole() === 'light' ? 'dark' : 'light';
+    const apply = () => setPole(next, true);
+    if (!still.matches && document.startViewTransition) {
+      polarityTransition = document.startViewTransition(apply);
+      polarityTransition.finished.catch(() => {}).finally(() => { polarityTransition = null; });
+    } else { apply(); }
+  });
+
+  /* One quiet sweep at scene thresholds; no observers on story paragraphs.
+     Unobserve after first entry, with immediate cleanup if stillness is requested. */
+  if ('IntersectionObserver' in window && !still.matches) {
+    const arrivals = new IntersectionObserver((entries) => {
+      entries.forEach(({ target, isIntersecting }) => {
+        if (!isIntersecting) return;
+        target.classList.add('is-arriving');
+        arrivals.unobserve(target);
+      });
+    }, { threshold: 0, rootMargin: '0px 0px -12% 0px' });
+    $$('.gate, .scene').forEach((el) => {
+      arrivals.observe(el);
+      el.addEventListener('animationend', (event) => {
+        if (event.animationName === 'threshold-shimmer') el.classList.remove('is-arriving');
+      });
+    });
+    still.addEventListener('change', () => {
+      if (still.matches) {
+        arrivals.disconnect();
+        $$('.is-arriving').forEach((el) => el.classList.remove('is-arriving'));
+      }
+    });
+  }
 
   /* ── fold one: size the monolith so the first sentence lands above the fold ── */
   const bar = $('.bar');
