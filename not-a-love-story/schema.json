@@ -1,0 +1,145 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ShortStory",
+      "@id": "#dispatch-01",
+      "name": "This Is Not a Love Story (Yankees)",
+      "headline": "This Is Not a Love Story (Yankees)",
+      "description": "A short story by Argelys Samuel Oriach. Dispatch 01: the first short story published via the Universe API by Seven Eighty Three (783). Complete and unabridged.",
+      "genre": [
+        "Fiction",
+        "Autofiction",
+        "Short story"
+      ],
+      "inLanguage": "en-US",
+      "wordCount": 11605,
+      "timeRequired": "PT49M",
+      "version": "2",
+      "datePublished": "2026-10-01",
+      "dateModified": "2026-10-03",
+      "isAccessibleForFree": true,
+      "author": {
+        "@id": "https://argelysoriach.com/#person"
+      },
+      "creator": {
+        "@id": "https://argelysoriach.com/#person"
+      },
+      "publisher": {
+        "@id": "https://seveneightythree.com/#organization"
+      },
+      "copyrightHolder": {
+        "@id": "https://argelysoriach.com/#person"
+      },
+      "copyrightYear": 2026,
+      "position": 1,
+      "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "name": "Universe API Dispatches",
+        "publisher": {
+          "@id": "https://seveneightythree.com/#organization"
+        }
+      },
+      "keywords": "autofiction, short story, Brooklyn, Bed-Stuy, Williamsburg, Yankee Stadium, Wesleyan, Dominican American, queer fiction",
+      "contentLocation": [
+        {
+          "@type": "Place",
+          "name": "Bedford-Stuyvesant, Brooklyn, New York"
+        },
+        {
+          "@type": "Place",
+          "name": "Williamsburg, Brooklyn, New York"
+        },
+        {
+          "@type": "StadiumOrArena",
+          "name": "Yankee Stadium",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bronx",
+            "addressRegion": "NY",
+            "addressCountry": "US"
+          }
+        }
+      ],
+      "hasPart": [
+        {
+          "@type": "CreativeWork",
+          "position": 1,
+          "name": "01 // January — Madison Street & Bedford Ave",
+          "url": "#m01",
+          "wordCount": 5817
+        },
+        {
+          "@type": "CreativeWork",
+          "position": 2,
+          "name": "02 // Summer — Williamsburg",
+          "url": "#m02",
+          "wordCount": 2460
+        },
+        {
+          "@type": "CreativeWork",
+          "position": 3,
+          "name": "03 // September — Section 327, Row 6",
+          "url": "#m03",
+          "wordCount": 3206
+        },
+        {
+          "@type": "CreativeWork",
+          "position": 4,
+          "name": "04 // Coda — The Ghost of Warmth",
+          "url": "#m04",
+          "wordCount": 122
+        }
+      ],
+      "accessMode": [
+        "textual"
+      ],
+      "accessModeSufficient": [
+        "textual"
+      ],
+      "accessibilityFeature": [
+        "structuralNavigation",
+        "readingOrder",
+        "alternativeText"
+      ],
+      "accessibilityHazard": [
+        "noFlashingHazard",
+        "noSoundHazard"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://argelysoriach.com/#person",
+      "name": "Argelys Samuel Oriach",
+      "jobTitle": "Chief Systems Architect, Founder, Artist-Writer | Matter and Body Architecture",
+      "description": "I reverse-engineered my life out of poverty in the Dominican Republic; today, I design infrastructure. As a Chief Systems Architect, Founder, and Artist-Writer of Seven Eighty Three, I engineer digital, physical, and narrative systems from first principles. I bridge high-level strategic objectives with deep technical execution, specializing in AI-assisted production and structured data frameworks (Schema.org, JSON-LD, llms.txt) for executive leadership and cultural institutions. My work ranges from launching fully realized venture concepts to deploying the Universe API—a framework operating below the query layer to dictate AI and search indexing. Across all industries, I run high-density operational diagnostics that strip away translation loss, revealing to executives how their organizational machine actually performs versus how they think it performs. As a writer, I apply this same structural rigor to narrative. I am the author of the digital short This Is Not a Love Story (thisisnotalovestory.net) and am currently writing my debut autofiction novel, Graduation. I provide the sight; my automated infrastructure builds the engine. Brooklyn-based. Available for advisory, consulting, and concept acquisition.",
+      "url": "https://argelysoriach.com/",
+      "sameAs": [
+        "https://www.linkedin.com/in/argelys-samuel-oriach/",
+        "https://seveneightythree.com/"
+      ],
+      "worksFor": [
+        {
+          "@id": "https://seveneightythree.com/#organization"
+        },
+        {
+          "@id": "https://wild-lake.org/#organization"
+        },
+        {
+          "@id": "https://communalfoundation.org/#organization"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://seveneightythree.com/#organization",
+      "name": "Seven Eighty Three",
+      "alternateName": "783",
+      "description": "An independent systems design laboratory.",
+      "url": "https://seveneightythree.com/",
+      "founder": {
+        "@id": "https://argelysoriach.com/#person"
+      }
+    }
+  ]
+}

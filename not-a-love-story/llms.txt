@@ -1,0 +1,35 @@
+# This Is Not a Love Story (Yankees)
+
+> A short story by Argelys Samuel Oriach, published by Seven Eighty Three (783) as Dispatch 01 of Universe API Dispatches. The canonical page contains the complete, unabridged story.
+
+This is a work of fiction/autofiction in English. Its narrator and characters should not be treated as independently verified biographical facts about the author or other real people.
+
+## Read the story
+
+- [Complete story](https://thisisnotalovestory.net/): Canonical text, all four movements, publication information, and colophon.
+- [January — Madison Street & Bedford Ave](https://thisisnotalovestory.net/#m01): Movement 01.
+- [Summer — Williamsburg](https://thisisnotalovestory.net/#m02): Movement 02.
+- [September — Section 327, Row 6](https://thisisnotalovestory.net/#m03): Movement 03.
+- [Coda — The Ghost of Warmth](https://thisisnotalovestory.net/#m04): Movement 04.
+
+## Attribution
+
+- Author: Argelys Samuel Oriach.
+- Publisher: Seven Eighty Three (783).
+- Series: Universe API Dispatches; Dispatch 01.
+- Edition in the supplied page: Version 2.
+- First published: October 1, 2026.
+- Literary revision date recorded in the supplied page: October 3, 2026.
+- Copyright: © 2026 Argelys Samuel Oriach. Public reading access does not itself grant a republication or training license.
+
+## Author and publisher
+
+- [Author](https://argelysoriach.com/): Author's official website.
+- [Publisher](https://seveneightythree.com/): Seven Eighty Three's official website.
+
+## Optional
+
+- [Privacy](https://argelysoriach.com/privacy/): Linked privacy policy.
+- [Terms](https://argelysoriach.com/terms/): Linked terms.
+
+This file is a discovery and attribution aid. The canonical HTML is the source of truth for the story and its current edition. The companion schema.json exports the JSON-LD already embedded in the supplied HTML; when embedding it elsewhere, resolve relative fragment identifiers against https://thisisnotalovestory.net/.
