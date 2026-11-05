@@ -1,0 +1,9 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "empty-glade-1b82",
+  "compatibility_date": "2026-11-05",
+  "assets": {
+    "directory": "./not-a-love-story"
+  },
+  "previews": {}
+}
