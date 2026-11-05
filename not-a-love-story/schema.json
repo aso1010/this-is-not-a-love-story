@@ -3,10 +3,10 @@
   "@graph": [
     {
       "@type": "ShortStory",
-      "@id": "#dispatch-01",
+      "@id": "https://thisisnotalovestory.net/#dispatch-01",
       "name": "This Is Not a Love Story (Yankees)",
       "headline": "This Is Not a Love Story (Yankees)",
-      "description": "A short story by Argelys Samuel Oriach. Dispatch 01: the first short story published via the Universe API by Seven Eighty Three (783). Complete and unabridged.",
+      "description": "Read This Is Not a Love Story (Yankees), the complete short story by Argelys Samuel Oriach, also known as Argelys Oriach. Published by Seven Eighty Three.",
       "genre": [
         "Fiction",
         "Autofiction",
@@ -66,28 +66,28 @@
           "@type": "CreativeWork",
           "position": 1,
           "name": "01 // January — Madison Street & Bedford Ave",
-          "url": "#m01",
+          "url": "https://thisisnotalovestory.net/#m01",
           "wordCount": 5817
         },
         {
           "@type": "CreativeWork",
           "position": 2,
           "name": "02 // Summer — Williamsburg",
-          "url": "#m02",
+          "url": "https://thisisnotalovestory.net/#m02",
           "wordCount": 2460
         },
         {
           "@type": "CreativeWork",
           "position": 3,
           "name": "03 // September — Section 327, Row 6",
-          "url": "#m03",
+          "url": "https://thisisnotalovestory.net/#m03",
           "wordCount": 3206
         },
         {
           "@type": "CreativeWork",
           "position": 4,
           "name": "04 // Coda — The Ghost of Warmth",
-          "url": "#m04",
+          "url": "https://thisisnotalovestory.net/#m04",
           "wordCount": 122
         }
       ],
@@ -105,18 +105,21 @@
       "accessibilityHazard": [
         "noFlashingHazard",
         "noSoundHazard"
-      ]
+      ],
+      "url": "https://thisisnotalovestory.net/",
+      "mainEntityOfPage": {
+        "@id": "https://thisisnotalovestory.net/#webpage"
+      }
     },
     {
       "@type": "Person",
       "@id": "https://argelysoriach.com/#person",
       "name": "Argelys Samuel Oriach",
       "jobTitle": "Chief Systems Architect, Founder, Artist-Writer | Matter and Body Architecture",
-      "description": "I reverse-engineered my life out of poverty in the Dominican Republic; today, I design infrastructure. As a Chief Systems Architect, Founder, and Artist-Writer of Seven Eighty Three, I engineer digital, physical, and narrative systems from first principles. I bridge high-level strategic objectives with deep technical execution, specializing in AI-assisted production and structured data frameworks (Schema.org, JSON-LD, llms.txt) for executive leadership and cultural institutions. My work ranges from launching fully realized venture concepts to deploying the Universe API—a framework operating below the query layer to dictate AI and search indexing. Across all industries, I run high-density operational diagnostics that strip away translation loss, revealing to executives how their organizational machine actually performs versus how they think it performs. As a writer, I apply this same structural rigor to narrative. I am the author of the digital short This Is Not a Love Story (thisisnotalovestory.net) and am currently writing my debut autofiction novel, Graduation. I provide the sight; my automated infrastructure builds the engine. Brooklyn-based. Available for advisory, consulting, and concept acquisition.",
+      "description": "Argelys Samuel Oriach, also known as Argelys Oriach, is the author of This Is Not a Love Story (Yankees) and an artist-writer at Seven Eighty Three.",
       "url": "https://argelysoriach.com/",
       "sameAs": [
-        "https://www.linkedin.com/in/argelys-samuel-oriach/",
-        "https://seveneightythree.com/"
+        "https://www.linkedin.com/in/argelys-samuel-oriach/"
       ],
       "worksFor": [
         {
@@ -128,7 +131,8 @@
         {
           "@id": "https://communalfoundation.org/#organization"
         }
-      ]
+      ],
+      "alternateName": "Argelys Oriach"
     },
     {
       "@type": "Organization",
@@ -140,6 +144,37 @@
       "founder": {
         "@id": "https://argelysoriach.com/#person"
       }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://thisisnotalovestory.net/#website",
+      "url": "https://thisisnotalovestory.net/",
+      "name": "This Is Not a Love Story (Yankees)",
+      "inLanguage": "en-US",
+      "publisher": {
+        "@id": "https://seveneightythree.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://thisisnotalovestory.net/#webpage",
+      "url": "https://thisisnotalovestory.net/",
+      "name": "This Is Not a Love Story (Yankees) — Argelys Samuel Oriach",
+      "description": "Read This Is Not a Love Story (Yankees), the complete short story by Argelys Samuel Oriach, also known as Argelys Oriach. Published by Seven Eighty Three.",
+      "isPartOf": {
+        "@id": "https://thisisnotalovestory.net/#website"
+      },
+      "mainEntity": {
+        "@id": "https://thisisnotalovestory.net/#dispatch-01"
+      },
+      "author": {
+        "@id": "https://argelysoriach.com/#person"
+      },
+      "relatedLink": [
+        "https://argelysoriach.com/",
+        "https://wildlakestudio.com/"
+      ],
+      "inLanguage": "en-US"
     }
   ]
 }

@@ -14,7 +14,7 @@ This is a work of fiction/autofiction in English. Its narrator and characters sh
 
 ## Attribution
 
-- Author: Argelys Samuel Oriach.
+- Author: Argelys Samuel Oriach (also known as Argelys Oriach).
 - Publisher: Seven Eighty Three (783).
 - Series: Universe API Dispatches; Dispatch 01.
 - Edition in the supplied page: Version 2.
@@ -27,9 +27,11 @@ This is a work of fiction/autofiction in English. Its narrator and characters sh
 - [Author](https://argelysoriach.com/): Author's official website.
 - [Publisher](https://seveneightythree.com/): Seven Eighty Three's official website.
 
+- [Wild Lake Studio](https://wildlakestudio.com/): Related studio website.
+
 ## Optional
 
 - [Privacy](https://argelysoriach.com/privacy/): Linked privacy policy.
 - [Terms](https://argelysoriach.com/terms/): Linked terms.
 
-This file is a discovery and attribution aid. The canonical HTML is the source of truth for the story and its current edition. The companion schema.json exports the JSON-LD already embedded in the supplied HTML; when embedding it elsewhere, resolve relative fragment identifiers against https://thisisnotalovestory.net/.
+This file is a discovery and attribution aid. The canonical HTML is the source of truth for the story and its current edition. [Structured data](https://thisisnotalovestory.net/schema.json) mirrors the JSON-LD embedded in the HTML and uses absolute entity identifiers. [Sitemap](https://thisisnotalovestory.net/sitemap.xml) lists the canonical story page.
