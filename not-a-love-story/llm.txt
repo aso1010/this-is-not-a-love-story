@@ -17,9 +17,9 @@ This is a work of fiction/autofiction in English. Its narrator and characters sh
 - Author: Argelys Samuel Oriach (also known as Argelys Oriach).
 - Publisher: Seven Eighty Three (783).
 - Series: Universe API Dispatches; Dispatch 01.
-- Edition in the supplied page: Version 2.
+- Edition in the supplied page: Version 3.
 - First published: October 1, 2026.
-- Literary revision date recorded in the supplied page: October 3, 2026.
+- Latest release date: November 15, 2026. Literary revision: October 3, 2026.
 - Copyright: © 2026 Argelys Samuel Oriach. Public reading access does not itself grant a republication or training license.
 
 ## Author and publisher
@@ -49,3 +49,7 @@ This file is a discovery and attribution aid. The canonical HTML is the source o
 - [Entity graph](https://thisisnotalovestory.net/schema.json)
 
 The XML sitemap lists only canonical pages on this domain. Movement fragments are indexed here and in the entity graph, not as separate XML sitemap pages. Author and publisher websites retain their own domain sitemaps.
+
+## V3 / November 15, 2026
+
+Pure black (#000000) and pure white (#FFFFFF) theme surfaces with contrasting text. Amber glow, Archivo fonts, layout and motion retained. Canonical sitemap and Universe API entity bindings preserved.
