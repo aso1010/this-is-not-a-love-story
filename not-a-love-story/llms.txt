@@ -7,10 +7,10 @@ This is a work of fiction/autofiction in English. Its narrator and characters sh
 ## Read the story
 
 - [Complete story](https://thisisnotalovestory.net/): Canonical text, all four movements, publication information, and colophon.
-- [January — Madison Street & Bedford Ave](https://thisisnotalovestory.net/#m01): Movement 01.
-- [Summer — Williamsburg](https://thisisnotalovestory.net/#m02): Movement 02.
-- [September — Section 327, Row 6](https://thisisnotalovestory.net/#m03): Movement 03.
-- [Coda — The Ghost of Warmth](https://thisisnotalovestory.net/#m04): Movement 04.
+- [01 / January: Madison Street & Bedford Ave](https://thisisnotalovestory.net/#m01): Movement 01.
+- [02 / Summer: Williamsburg](https://thisisnotalovestory.net/#m02): Movement 02.
+- [03 / September: Section 327, Row 6](https://thisisnotalovestory.net/#m03): Movement 03.
+- [04 / Coda: The Ghost of Warmth](https://thisisnotalovestory.net/#m04): Movement 04.
 
 ## Attribution
 
@@ -34,4 +34,18 @@ This is a work of fiction/autofiction in English. Its narrator and characters sh
 - [Privacy](https://argelysoriach.com/privacy/): Linked privacy policy.
 - [Terms](https://argelysoriach.com/terms/): Linked terms.
 
-This file is a discovery and attribution aid. The canonical HTML is the source of truth for the story and its current edition. [Structured data](https://thisisnotalovestory.net/schema.json) mirrors the JSON-LD embedded in the HTML and uses absolute entity identifiers. [Sitemap](https://thisisnotalovestory.net/sitemap.xml) lists the canonical story page.
+This file is a discovery and attribution aid. The canonical HTML is the source of truth for the story and its current edition. [Structured data](https://thisisnotalovestory.net/schema.json) mirrors the JSON-LD embedded in the HTML and uses absolute entity identifiers. [Sitemap](https://thisisnotalovestory.net/sitemap.xml) lists the canonical story and sitemap pages.
+
+## Universe API entity bindings
+
+- Sitemap WebPage @id: https://thisisnotalovestory.net/sitemap/#webpage
+- ShortStory / CreativeWork @id: https://thisisnotalovestory.net/#work
+- Person @id: https://argelysoriach.com/#person
+- Organization @id: https://seveneightythree.com/#organization
+- The work author references the Person; its publisher references the Organization.
+- hasPart is ordered by position 1 through 4, with each movement @id equal to its canonical fragment URL above.
+- [Human sitemap](https://thisisnotalovestory.net/sitemap/)
+- [XML sitemap](https://thisisnotalovestory.net/sitemap.xml)
+- [Entity graph](https://thisisnotalovestory.net/schema.json)
+
+The XML sitemap lists only canonical pages on this domain. Movement fragments are indexed here and in the entity graph, not as separate XML sitemap pages. Author and publisher websites retain their own domain sitemaps.

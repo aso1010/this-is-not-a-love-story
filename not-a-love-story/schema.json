@@ -2,8 +2,11 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "ShortStory",
-      "@id": "https://thisisnotalovestory.net/#dispatch-01",
+      "@type": [
+        "ShortStory",
+        "CreativeWork"
+      ],
+      "@id": "https://thisisnotalovestory.net/#work",
       "name": "This Is Not a Love Story (Yankees)",
       "headline": "This Is Not a Love Story (Yankees)",
       "description": "Read This Is Not a Love Story (Yankees), the complete short story by Argelys Samuel Oriach, also known as Argelys Oriach. Published by Seven Eighty Three.",
@@ -65,30 +68,46 @@
         {
           "@type": "CreativeWork",
           "position": 1,
-          "name": "01 // January — Madison Street & Bedford Ave",
+          "name": "01 / January: Madison Street & Bedford Ave",
           "url": "https://thisisnotalovestory.net/#m01",
-          "wordCount": 5817
+          "wordCount": 5817,
+          "@id": "https://thisisnotalovestory.net/#m01",
+          "isPartOf": {
+            "@id": "https://thisisnotalovestory.net/#work"
+          }
         },
         {
           "@type": "CreativeWork",
           "position": 2,
-          "name": "02 // Summer — Williamsburg",
+          "name": "02 / Summer: Williamsburg",
           "url": "https://thisisnotalovestory.net/#m02",
-          "wordCount": 2460
+          "wordCount": 2460,
+          "@id": "https://thisisnotalovestory.net/#m02",
+          "isPartOf": {
+            "@id": "https://thisisnotalovestory.net/#work"
+          }
         },
         {
           "@type": "CreativeWork",
           "position": 3,
-          "name": "03 // September — Section 327, Row 6",
+          "name": "03 / September: Section 327, Row 6",
           "url": "https://thisisnotalovestory.net/#m03",
-          "wordCount": 3206
+          "wordCount": 3206,
+          "@id": "https://thisisnotalovestory.net/#m03",
+          "isPartOf": {
+            "@id": "https://thisisnotalovestory.net/#work"
+          }
         },
         {
           "@type": "CreativeWork",
           "position": 4,
-          "name": "04 // Coda — The Ghost of Warmth",
+          "name": "04 / Coda: The Ghost of Warmth",
           "url": "https://thisisnotalovestory.net/#m04",
-          "wordCount": 122
+          "wordCount": 122,
+          "@id": "https://thisisnotalovestory.net/#m04",
+          "isPartOf": {
+            "@id": "https://thisisnotalovestory.net/#work"
+          }
         }
       ],
       "accessMode": [
@@ -159,13 +178,13 @@
       "@type": "WebPage",
       "@id": "https://thisisnotalovestory.net/#webpage",
       "url": "https://thisisnotalovestory.net/",
-      "name": "This Is Not a Love Story (Yankees) — Argelys Samuel Oriach",
+      "name": "This Is Not a Love Story (Yankees) / Argelys Samuel Oriach",
       "description": "Read This Is Not a Love Story (Yankees), the complete short story by Argelys Samuel Oriach, also known as Argelys Oriach. Published by Seven Eighty Three.",
       "isPartOf": {
         "@id": "https://thisisnotalovestory.net/#website"
       },
       "mainEntity": {
-        "@id": "https://thisisnotalovestory.net/#dispatch-01"
+        "@id": "https://thisisnotalovestory.net/#work"
       },
       "author": {
         "@id": "https://argelysoriach.com/#person"
@@ -175,6 +194,30 @@
         "https://wildlakestudio.com/"
       ],
       "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://thisisnotalovestory.net/sitemap/#webpage",
+      "url": "https://thisisnotalovestory.net/sitemap/",
+      "name": "Sitemap / This Is Not a Love Story (Yankees)",
+      "isPartOf": {
+        "@id": "https://thisisnotalovestory.net/#website"
+      },
+      "mainEntity": {
+        "@id": "https://thisisnotalovestory.net/#work"
+      },
+      "author": {
+        "@id": "https://argelysoriach.com/#person"
+      },
+      "publisher": {
+        "@id": "https://seveneightythree.com/#organization"
+      },
+      "inLanguage": "en-US",
+      "relatedLink": [
+        "https://thisisnotalovestory.net/sitemap.xml",
+        "https://thisisnotalovestory.net/llms.txt",
+        "https://thisisnotalovestory.net/schema.json"
+      ]
     }
   ]
 }
